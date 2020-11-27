@@ -15,5 +15,14 @@ SELECT first_name,
 	
 SELECT dept_manager.emp_no,
 	dept_manager.dept_no,
-	department.dept_name,
+	departments.dept_name,
+	employee.last_name,
+	employee.first_name
+	from dept_manager
+	INNER JOIN departments
+	on dept_manager.dept_no = departments.dept_no
+	INNER JOIN employee
+	on dept_manager.emp_no = employee.emp_no;
+
+
 	
