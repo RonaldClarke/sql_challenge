@@ -63,3 +63,8 @@ select employee.emp_no,
 	on dept_emp.dept_no=departments.dept_no
 	where dept_name = 'Sales'
 	or dept_name = 'Development';
+	
+SELECT last_name, COUNT(*)
+	from employee
+	group by last_name
+	order by count desc;
