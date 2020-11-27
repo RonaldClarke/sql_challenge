@@ -33,4 +33,33 @@ SELECT employee.emp_no,
 	on employee.emp_no = dept_emp.emp_no
 	INNER JOIN departments
 	on dept_emp.dept_no = departments.dept_no;
-	
+
+select first_name,
+	last_name,
+	sex
+	from employee
+	where first_name ='Hercules'
+	and last_name like 'B%';
+
+select employee.emp_no,
+	employee.last_name,
+	employee.first_name,
+	departments.dept_name
+	from employee
+	inner join dept_emp
+	on employee.emp_no=dept_emp.emp_no
+	inner join departments
+	on dept_emp.dept_no=departments.dept_no
+	where dept_name = 'Sales';
+
+select employee.emp_no,
+	employee.last_name,
+	employee.first_name,
+	departments.dept_name
+	from employee
+	inner join dept_emp
+	on employee.emp_no=dept_emp.emp_no
+	inner join departments
+	on dept_emp.dept_no=departments.dept_no
+	where dept_name = 'Sales'
+	or dept_name = 'Development';
