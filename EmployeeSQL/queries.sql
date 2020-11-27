@@ -13,3 +13,7 @@ SELECT first_name,
 	FROM employee
 	WHERE date_part('year',hire_date) = 1986;
 	
+SELECT dept_manager.emp_no,
+	dept_manager.dept_no,
+	department.dept_name,
+	
