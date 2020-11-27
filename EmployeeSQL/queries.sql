@@ -6,9 +6,10 @@ SELECT employee.emp_no,
 	FROM employee
 	LEFT JOIN salaries
 	ON employee.emp_no = salaries.emp_no;
-select * from employee
+
 SELECT first_name,
 	last_name, 
 	hire_date
 	FROM employee
-	WHERE hire_date LIKE '1986%';
+	WHERE date_part('year',hire_date) = 1986;
+	
