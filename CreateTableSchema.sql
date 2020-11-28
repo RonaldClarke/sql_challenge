@@ -19,7 +19,7 @@ CREATE TABLE "employee" (
         "emp_no"
      )
 );
-select * from employee
+select * from employee 
 
 CREATE TABLE "departments" (
     "dept_no" VARCHAR(30)   NOT NULL,
